@@ -4,16 +4,10 @@
         flex-direction: row;
         justify-content: space-around;
     }
-
-    .drag-area {
-        width: 30%;
-        height: 100vh;
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-    }
 </style>
 <script lang="ts">
         import Item from '../lib/Item.svelte';
+        import DragArea from '../lib/DragArea.svelte';
         import { onMount } from 'svelte';
         onMount(() => {
             const item = document.getElementById('item') || new Element();
@@ -24,13 +18,13 @@
     })
 </script>
 <div class="container">
-    <div class="drag-area" >
+    <DragArea id="todo-area">
         <Item/>
-    </div>
-    <div class="drag-area">
-
-    </div>
-    <div class="drag-area">
-
-    </div>
+    </DragArea>
+    <DragArea id="doing-area">
+        <Item/>
+    </DragArea>
+    <DragArea id="done-area">
+        <Item/>
+    </DragArea>
 </div>
