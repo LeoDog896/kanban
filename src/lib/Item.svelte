@@ -4,7 +4,6 @@
         width: 80%;
         margin: auto;
         padding: 1rem;
-        background-color: skyblue;
     }
 
     /* apply a grab cursor when hovering */
@@ -21,12 +20,8 @@
 </style>
 <script lang="ts">
     import { draggable } from '@neodrag/svelte';
-	import { element } from 'svelte/internal';
-    import { onMount } from 'svelte';
-
-    
-    
+    import randomColor from 'randomcolor'; 
 </script>
-<div use:draggable={{ bounds: 'body' }} id="item" class="item-container">
+<div use:draggable={{ bounds: 'body' }} id="item" style="background-color: {randomColor({ luminosity: 'light' })}" class="item-container">
     Hello!
 </div>

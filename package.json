@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@neodrag/svelte": "^2.0.3"
+		"@neodrag/svelte": "^2.0.3",
+		"randomcolor": "^0.6.2"
 	}
 }
