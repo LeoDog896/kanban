@@ -7,7 +7,17 @@
         background-color: skyblue;
     }
 
-    
+    /* apply a grab cursor when hovering */
+    .item-container:hover {
+        /* fallback if grab isn't supported */
+        cursor: move;
+        cursor: grab;
+    }
+
+    /* apply a grabbing cursor when dragging */
+    .item-container:active {
+        cursor: grabbing;
+    }
 </style>
 <script lang="ts">
     import { draggable } from '@neodrag/svelte';
